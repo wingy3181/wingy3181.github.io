@@ -41,4 +41,4 @@ Overview
   > - `bundle show minima`
 
 * To start a terminal within the docker container, use the following command:
-  - `docker exec -it <image_name> bash` (e.g.`docker exec -it jekyll_jekyll_1 bash`)
+  - `docker exec -it <container_name> bash` (e.g.`docker exec -it jekyll_jekyll_1 bash`)
