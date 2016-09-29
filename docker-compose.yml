@@ -1,6 +1,6 @@
 jekyll:
     image: jekyll/jekyll:pages
-    command: jekyll serve --watch --incremental
+    command: bash -c "rm -rf ./categories/*.html && rm -rf ./tags/*.html && ./scripts/generate-categories && ./scripts/generate-tags && bundle exec jekyll serve --watch"
     ports:
         - 4000:4000
     volumes:

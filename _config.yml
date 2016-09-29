@@ -1,12 +1,250 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: ""     # the base hostname & protocol for your site
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - docker-compose.yml
-  - README.md
-  - /scripts
+# Site settings
+
+# NB! Set your site's url, otherwise stuff will break :)
+
+url: "https://wingy3181.github.io"     # the base hostname & protocol for your site
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (https://yourusername.github.io/repository-name)
+# and NOT your user repository (https://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+#
+# NB! Without this *nothing* will work, because it's used in every path :)
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Google tracking id
+
+google-tracking-id: "UA-85115612-1" # Variable used in /_includes/js.html
+
+# Forces https everywhere in your website, except when you serve it locally
+# If you are not hosted on Github Pages, and your host doesn't support https
+# then you should disable it
+
+force-https: True # Variable used in /_includes/head_force-https.html
+
+#############
+# HTML Head #
+#############
+
+lang: "en" # Variable used in /_layouts/*.html
+author: "Cheong Yip" # Variable used in /includes/(head|footer).html
+title: "{ Cheong Yip }" # Variable used in /includes/(head|navigation).html
+description: "Blog and website of Cheong Yip." # Variable used in /_includes/head.html
+keywords: "family, life, software, engineering, programming, cheong, yip" # Variable used in /_includes/head.html
+favicon: "/img/favicon.ico" # Variable used in /_includes/head.html
+
+##############################
+# Header + Navigation layout #
+##############################
+
+black-favicon: "/img/icon-transparent-bg.svg" # Variable used in /_includes/navigation.html
+
+background-img: "../img/intro-bg.jpg" # Variable used in /css/grayscale.scss
+
+me-img: "/img/me-cartoon-transparent-bg.200x200.png" # Variable used in /_includes/header.html
+
+##########################################
+# Dynamic Text on the Header             #
+# - Variables used in /_includes/js.html #
+##########################################
+
+dynamic-typing: True
+shuffle: True # Shuffle the lines.
+loop: True
+loop-count: False # Set False for infinite loop, or set any number for finite loop.
+type-speed: 10
+start-delay: 200
+delete-delay: 5000
+lines: # You can add HTML Tags in the Text
+  - text: "I can accept failure, but I can't accept not trying."
+  - text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+  - text: "Controlling complexity is the essence of computer programming."
+  - text: "Fail early, Fail fast, fail often."
+  - text: "Life is not always a matter of holding good cards, but sometimes playing a poor hand well."
+  - text: "Life would be much easier if I had the source code."
+  - text: "I love software, because if you can imagine something, you can build it."
+
+########################################################
+# Color the browser elements                           #
+# Variables used in /_includes/head_color-browser.html #
+########################################################
+color-browser: "#222222"
+apple-status-bar-style: "black"
+
+#######################################################################
+# Web app mode                                                        #
+# - Variables used in /_includes/head_web-app.html and /manifest.json #
+#######################################################################
+
+web-app-mode: True
+
+# Icons for Web App mode
+
+icon-36p: "/img/web-app/icon-36p.png"
+icon-48p: "/img/web-app/icon-48p.png"
+icon-72p: "/img/web-app/icon-72p.png"
+icon-96p: "/img/web-app/icon-96p.png"
+icon-144p: "/img/web-app/icon-144p.png"
+icon-192p: "/img/web-app/icon-192p.png"
+
+########
+# Blog #
+########
+
+enable-gesture-navigation: False # Variable used in /_includes/js.html for both blog/posts gesture navigation
+
+post-preview-words: 96  # Variable used in /_includes/section_latest-post.html
+
+email-share: True        # Variable used in /_includes/share.html
+fb-share: True           # Variable used in /_includes/share.html
+twitter-share: True      # Variable used in /_includes/share.html
+linkedin-share: True     # Variable used in /_includes/share.html
+reddit-share: True       # Variable used in /_includes/share.html
+google-plus-share: True  # Variable used in /_includes/share.html
+tumblr-share: True       # Variable used in /_includes/share.html
+pinterest-share: True    # Variable used in /_includes/share.html
+pocket-share: True       # Variable used in /_includes/share.html
+vkontakte-share: False   # Variable used in /_includes/share.html
+
+# https://disqus.com/admin/universalcode
+disqus-shortname: "wingy3181" # Variable used in /_includes/comments.html and /_includes/js.html
+
+syntax-highlight: True # Variable used in /_includes/head_syntax-highlight.html
+
+########################################################
+# Timeline                                             #
+# - Variables used in /_includes/section_timeline.html #
+########################################################
+
+events:
+  - image: "/img/timeline/octocat.png"
+    date: "November 2011 - Today"
+    description: |
+      *Github/FOSS journeyman*
+  - image: "/img/timeline/macquarie-bank-300x300.jpg"
+    date: "June 2015 - Today"
+    description: |
+      *Software engineer*
+  - image: "/img/timeline/amp-300x300.png"
+    date: "June 2012 - June 2015"
+    description: |
+      *Senior Developer/Tech Lead*
+  - image: "/img/timeline/vodafone-250x250.jpg"
+    date: "January 2011 - June 2012"
+    description: |
+      *Consultant*
+  - image: "/img/timeline/westpac-300x300.png"
+    date: "February 2006 - January 2011"
+    description: |
+      *Senior Developer*
+  - image: "/img/timeline/csmart-300x300.gif"
+    date: "September 2003 - January 2006"
+    description: |
+      *Associate Consultant*
+
+# First image of the Timeline
+
+timeline-img: "/img/timeline/unsw-280x280.png"
+
+###########
+# Contact #
+###########
+
+email: "wingy3181@gmail.com" # Variable used in /_includes/section_contact.html.
+
+###########
+# Resumé #
+###########
+
+resume: # Variable used in /_includes/section_contact.html.
+  - type: "pdf"
+    url: "../docs/resume/wing-cheong-yip-resume.pdf"
+  - type: "word"
+    url: "../docs/resume/wing-cheong-yip-resume.docx"
+
+########################################################
+# Author Blurb                                         #
+# - Variables used in /_includes/post.html             s#
+########################################################
+
+# The author blurb goes underneath blog posts.
+# This works best when your author blurb image has a transparent background, or matches your site background color.
+
+# if the author_blurb is not set, then this feature is skipped
+author_blurb: " "
+author_blurb_image: "/img/me-cartoon-transparent-bg.200x200.png"
+
+##################
+# Social Buttons #
+##################
+
+# Variables used in /includes/footer_social-buttons.html
+social:
+  - title: "facebook"
+    url: "https://facebook.com/wingy3181"
+  - title: "twitter"
+    url: "https://twitter.com/wingy3181"
+  - title: "github"
+    url: "https://github.com/wingy3181"
+  - title: "linkedin-square"
+    url: "https://www.linkedin.com/in/wingy3181"
+  - title: "rss"
+    url: "/feed.xml"
+
+############
+# 404 page #
+############
+
+404-img: "/img/404.png" # Variable used in /_layouts/error.html
+
+##################
+# GPG on Keybase #
+##################
+
+keybase-username: wingy3181 # Variable used in /_layouts/footer.html and /_layouts/footer_social-buttons.html
+keybase-in-social: True # Variable used in /_layouts/footer_social-buttons.html
+keybase-in-footer: True # Variable used in /_layouts/footer.html
+
+################################################################################
+
+# NB! Tread carefully if you want to change the variables below this point!
+
+# Sections shown in the index page
+# - Variables used in /_includes/navigation.html and /_layouts/index.html
+
+pages_list:
+  About: 'about'
+  Blog: 'latest-post'
+  Timeline: 'timeline'
+  Contact: 'contact'
+
+################################################################################
+
+# Exclusion list from the generated _site
+
+exclude: [ "Gemfile", "Gemfile.lock", "docker-compose.yml", "README.md", "/scripts" ]
+
+# Enable pagination for blog posts (http://jekyllrb.com/docs/pagination/)
+
+paginate_path: "blog/page:num/"
+paginate: 5
+
+# Enable minification SASS (http://jekyllrb.com/docs/assets/#sassscss)
+
+sass:
+  style: compressed
+
+# Plugins (make sure also added to Gemfile)
+
+gems:
+  - jekyll-paginate # https://github.com/jekyll/jekyll-paginate
+  - jemoji # https://github.com/jekyll/jemoji
+
+encoding: "utf-8"
+
+################################################################################
 
 # Build settings
 markdown: kramdown
