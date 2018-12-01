@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.2.1"
+gem "jekyll", ">= 3.6.3"
 
 # If you want to use pagination, use the following line below to install the
 # plugin for pagination support. See http://jekyllrb.com/docs/pagination/ for
